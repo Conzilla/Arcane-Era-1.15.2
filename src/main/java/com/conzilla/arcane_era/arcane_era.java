@@ -1,7 +1,11 @@
 package com.conzilla.arcane_era;
 
+import com.conzilla.arcane_era.util.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.registry.Registry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -22,9 +26,9 @@ import java.util.stream.Collectors;
 @Mod("aec")
 public class arcane_era
 {
+    public static final String MOD_ID = "aec";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
-
     public arcane_era() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -34,6 +38,8 @@ public class arcane_era
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+
+        RegistryHandler.Registeritems();
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -59,5 +65,13 @@ public class arcane_era
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
     }
+
+    public static final ItemGroup TAB = new ItemGroup("arcaneera")
+    {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(RegistryHandler.ADMANTITE_INGOT.get());
+        }
+    };
 
 }
