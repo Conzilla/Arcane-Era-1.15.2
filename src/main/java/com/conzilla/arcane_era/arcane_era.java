@@ -32,14 +32,11 @@ public class arcane_era
     public arcane_era() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        // Register the enqueueIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
-        // Register the processIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         RegistryHandler.Registeritems();
+        RegistryHandler.Registerblocks();
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -52,15 +49,7 @@ public class arcane_era
 
     }
 
-    private void enqueueIMC(final InterModEnqueueEvent event)
-    {
 
-    }
-
-    private void processIMC(final InterModProcessEvent event)
-    {
-
-    }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
