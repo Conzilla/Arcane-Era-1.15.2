@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "aec:block/admantite_ore"
+    "all": "aec:block/orichalcum_ore"
   }
 }

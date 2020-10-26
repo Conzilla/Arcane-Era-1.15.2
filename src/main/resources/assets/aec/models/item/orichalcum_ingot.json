@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "aec:items/orichalcum_ingot"
+    "layer0": "aec:item/orichalcum_ingot"
   }
 }

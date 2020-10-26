@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "aec:items/admantite_ingot"
+    "layer0": "aec:item/admantite_ingot"
   }
 }

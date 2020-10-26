@@ -4,16 +4,14 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
 
-public class Admantite_ore extends Block
-{
-
-    public Admantite_ore() {
+public class Mythril_Ore extends Block {
+    public Mythril_Ore() {
         super(Block.Properties.create(Material.ROCK)
-        .hardnessAndResistance(3.5F,15.0F)
-        .harvestLevel(3)
-        .harvestTool(ToolType.PICKAXE)
+                .hardnessAndResistance(5.0F,21.0F)
+                .harvestLevel(3)
+                .harvestTool(ToolType.PICKAXE)
+
 
         );
-
     }
 }
