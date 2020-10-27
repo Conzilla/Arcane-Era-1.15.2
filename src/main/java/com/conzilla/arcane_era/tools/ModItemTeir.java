@@ -7,15 +7,15 @@ import net.minecraft.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModItemTeir implements IItemTier {
-    ADMANTIUM(4, 1600, 9.0F, 3.0F, 15,() ->{
+    ADMANTITE(3,1570,10.0F,5.0F,22,() ->{
         return Ingredient.fromItems(RegistryHandler.ADMANTITE_INGOT.get());
     }),
 
-    ORICHALCUM(4, 2000, 11.0F, 4.0F, 15,() ->{
+    ORICHALCUM(4, 20000, 16.0F, 3.0F, 19,() ->{
         return Ingredient.fromItems(RegistryHandler.ORICHALCUM_INGOT.get());
     }),
 
-    MYTHRIL(1, 500, 4.0F, 1.0F, 5,() ->{
+    MYTHRIL(3,2000,10.0F,7.0F,10,() ->{
         return Ingredient.fromItems(RegistryHandler.MYTHRIL_GEM.get());
     });
 
